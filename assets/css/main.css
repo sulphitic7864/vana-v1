@@ -1228,6 +1228,7 @@ section,
 
 .faq .faq-container {
   margin-top: 25px;
+  background-color: var(--cream-warm);
 }
 
 /* Individual FAQ item */
