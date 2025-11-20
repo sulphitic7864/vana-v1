@@ -8,8 +8,7 @@
     <meta name="keywords" content="" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <!-- <link href="assets/images/favicon.ico" rel="icon" /> -->
+    <link href="assets/images/favicon.ico" rel="icon" />
 
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
@@ -59,14 +58,18 @@
             <li><a href="index.html#gallery">Gallery</a></li>
 
             <li class="dropdown">
-              <a href="#">
+              <a  class="active" href="#">
                 <span>More</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul>
-                <li><a href="index.html#private-events">Private Events</a></li>
-                <li><a class="active" href="index.html#partnerships">Partnerships</a></li>
-                <li><a href="index.html#apply">Apply</a></li>
+                <li><a class="active" href="private-events.html">Private Events</a></li>
+                <li>
+                  <a  href="partnerships.html"
+                    >Partnerships</a
+                  >
+                </li>
+                <li><a href="apply.html">Apply</a></li>
               </ul>
             </li>
 
@@ -85,8 +88,8 @@
           <div class="container">
             <div class="row d-flex justify-content-center text-center">
               <div class="col-lg-12">
-                <h1>Partner with vana</h1>
-                <p class="mb-0">Short answers, no fluff.</p>
+                <h1>Private Events</h1>
+                <p class="mb-0">Birthdays, offsites, or intimate gatherings — host it the vana way. We bring the design, the food, and the flow.</p>
               </div>
             </div>
           </div>
@@ -94,175 +97,173 @@
       </div>
       <!-- End Page Title -->
 
-      <!-- Faq Section -->
-      <section id="faq" class="faq section light-background">
-        <div class="container-fluid">
-          <div class="row gy-5">
-            <div
-              class="col-lg-9 mx-auto d-flex flex-column justify-content-center order-2 order-lg-1"
-            >
-              <div
-                class="content px-xl-5"
-                data-aos="fade-up"
-                data-aos-delay="100"
+      <section id="private-events-form" class="py-5">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 event-form p-5 rounded">
+              <form
+                action="forms/private-events.php"
+                method="post"
+                class="php-email-form"
               >
-                <h3 class="text-center">
-                  <span>Frequently Asked </span><strong>Questions</strong>
-                </h3>
-                <p>
-                  Here you’ll find answers to the questions we get asked most
-                  often. We’ve kept things simple and transparent so you can
-                  feel confident, and excited before you join us.
-                </p>
-              </div>
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <label class="form-label" for="input-name">Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="input-name"
+                      class="form-control"
+                      placeholder="Name"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="input-email">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="input-email"
+                      placeholder="Email"
+                      required=""
+                    />
+                  </div>
 
-              <div
-                class="faq-container px-xl-5"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div class="faq-item">
-                  <h3 class="faq-question">Is vana a dating trip?</h3>
-                  <div class="faq-content">
-                    <p>
-                      No. It’s about great weekends with great people. Chemistry
-                      happens naturally, but the design is in the taste,
-                      conversation, food and place.
+                  <div class="col-md-12">
+                    <label class="form-label" for="input-event-type"
+                      >Event type</label
+                    >
+                    <select
+                      name="event-type"
+                      id="input-event-type"
+                      class="form-select"
+                      required=""
+                    >
+                      <option value="" selected disabled>Select one</option>
+                      <option value="Birthday">Birthday</option>
+                      <option value="Offsite">Offsite</option>
+                      <option value="Intimate Gathering">
+                        Intimate Gathering
+                      </option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="input-month"
+                      >Preferred month</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="preferred-month"
+                      id="input-month"
+                      placeholder="e.g. June 2026"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="input-group-size"
+                      >Group size</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="group-size"
+                      id="input-group-size"
+                      placeholder="e.g. 16"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label class="form-label" for="input-details"
+                      >Tell us what you have in mind</label
+                    >
+                    <small class="form-text text-muted d-block mb-1"
+                      >Include any dates, time, or ideas you have.</small
+                    >
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      id="input-details"
+                      rows="6"
+                      placeholder="The vibe, the crowd, the moments you want to create..."
+                      required=""
+                    ></textarea>
+                  </div>
+
+                  <div class="col-md-12 mt-3">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="check-subscribe"
+                      />
+                      <label
+                        class="form-check-label small"
+                        for="check-subscribe"
+                      >
+                        I'd like to receive occasional emails about vana
+                        weekends and events. (Optional)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="check-policy"
+                        required=""
+                      />
+                      <label class="form-check-label small" for="check-policy">
+                        I agree to the privacy policy.
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 mt-3">
+                    <div class="d-flex align-items-center mb-3">
+                      <div
+                        class="g-recaptcha-placeholder"
+                        style="
+                          width: 304px;
+                          height: 78px;
+                          border: 1px solid #ccc;
+                        "
+                      >
+                        <img
+                          src="assets/images/recaptcha-placeholder.png"
+                          alt="I'm not a robot checkbox"
+                          style="width: 100%; height: 100%; object-fit: cover"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your inquiry has been submitted.
+                    </div>
+
+                    <p class="small text-muted mt-3 mb-5">
+                      By submitting, you agree to our Terms and Code of Conduct.
                     </p>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary">
+                        Submit Enquiry
+                      </button>
+                    </div>
                   </div>
                 </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">How does selection work?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Short application + vibe check. We look for mix
-                      (interests, backgrounds, energy) so the table sings.
-                      You’ll hear back within a week or so.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">What’s included in the price?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Two nights in a design-led venue, hosted long-table meals,
-                      light activities, and return group transport from a
-                      central pick‑up. Optional add-ons for wine pairings and
-                      single occupancy.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Do I need to know anyone?</h3>
-                  <div class="faq-content">
-                    <p>
-                      No. Most guests come solo. Your host removes awkwardness
-                      from pick-up to drop-off so you can relax fast.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Can I come if I don’t drink?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Absolutely. We always offer thoughtful no- and low-alcohol
-                      options.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Rooming — will I share?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Standard is shared occupancy in beautiful rooms.
-                      Single-occupancy is limited and can be booked as an
-                      add-on.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">What should I pack?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Weekend bag, layers, walkable shoes, a book for quiet
-                      pockets. We email a simple packing list the week before.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Refunds & transfers</h3>
-                  <div class="faq-content">
-                    <p>
-                      Deposits are non-refundable but transferable. If you can’t
-                      make it, you can transfer to a friend who fits our
-                      criteria (we’ll re-screen) or move to another date if
-                      available. Full T&Cs on checkout.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Accessibility & dietary needs</h3>
-                  <div class="faq-content">
-                    <p>
-                      Tell us on the form — venues are chosen for good access
-                      where possible, and chefs can accommodate most dietary
-                      needs.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Is there an app to download?</h3>
-                  <div class="faq-content">
-                    <p>
-                      We think you spend enough time on your phone already. Vana
-                      is designed to pull you back into the real world, not
-                      another app. If you’re accepted onto a weekend, we’ll
-                      invite you into a curated WhatsApp group with the other
-                      guests and share all the details there.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">2. Why is it called Vana?</h3>
-                  <div class="faq-content">
-                    <p>
-                      In Sanskrit, vana means “forest”. A place to wander,
-                      breathe and feel a little removed from everyday life. For
-                      us, Vana is about that feeling: stepping out of the city
-                      and into somewhere softer, slower and more cinematic, even
-                      if it’s just for a weekend.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">
-                    3. Is there a way to stay connected after the weekend?
-                  </h3>
-                  <div class="faq-content">
-                    <p>
-                      We’re building The Grove, a private circle for Vana alumni
-                      – the people who’ve shared a table, a bottle and a weekend
-                      with us. More on that soon.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Faq Section -->
     </main>
 
     <footer id="footer" class="footer dark-background">

@@ -139,6 +139,7 @@ input[type="email"],
 input[type="tel"],
 input[type="number"],
 textarea,
+.form-select,
 select {
   font-size: 14px;
   padding: 10px 15px;
@@ -154,6 +155,7 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
 textarea:focus,
+.form-select:focus,
 select:focus {
   border-color: var(--accent-color);
   background-color: var(--cream-mist);
@@ -1339,7 +1341,7 @@ section,
 # Partnerships Page
 --------------------------------------------------------------*/
 .partner-form{
-  background-color: var(--cream-warm);
+  /* background-color: var(--clay-brown); */
 }
 #whyVana ul {
   list-style: none;
@@ -1352,6 +1354,12 @@ section,
 }
 
 #workTogether {
+  background-color: var(--cream-warm);
+}
+#partner-form .container {
+  background-color: var(--cream-warm);
+}
+#apply .container {
   background-color: var(--cream-warm);
 }
 .work-together-card .image-container {
@@ -1388,4 +1396,12 @@ section,
   margin-left: auto;
   margin-right: auto;
   line-height: 1.4;
+}
+
+
+/* -----------------------------------------
+Evnet Form
+-------------------------------------------- */
+.event-form{
+  background-color: var(--cream-warm);
 }

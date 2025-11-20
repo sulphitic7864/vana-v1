@@ -59,14 +59,14 @@
             <li><a href="index.html#gallery">Gallery</a></li>
 
             <li class="dropdown">
-              <a href="#">
+              <a class="active" href="#">
                 <span>More</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul>
-                <li><a href="index.html#private-events">Private Events</a></li>
-                <li><a class="active" href="index.html#partnerships">Partnerships</a></li>
-                <li><a href="index.html#apply">Apply</a></li>
+                <li><a href="private-events.html">Private Events</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+                <li><a class="active" href="apply.html">Apply</a></li>
               </ul>
             </li>
 
@@ -85,8 +85,10 @@
           <div class="container">
             <div class="row d-flex justify-content-center text-center">
               <div class="col-lg-12">
-                <h1>Partner with vana</h1>
-                <p class="mb-0">Short answers, no fluff.</p>
+                <h1>Join the waitlist</h1>
+                <p class="mb-0">
+                  Tell us a bit about you. If it’s a match, we’ll be in touch.
+                </p>
               </div>
             </div>
           </div>
@@ -94,175 +96,288 @@
       </div>
       <!-- End Page Title -->
 
-      <!-- Faq Section -->
-      <section id="faq" class="faq section light-background">
-        <div class="container-fluid">
-          <div class="row gy-5">
-            <div
-              class="col-lg-9 mx-auto d-flex flex-column justify-content-center order-2 order-lg-1"
-            >
-              <div
-                class="content px-xl-5"
-                data-aos="fade-up"
-                data-aos-delay="100"
+      <section id="apply" class="py-5">
+        <div class="container p-5 rounded" data-aos="fade-up">
+          <div class="row text-center mb-5">
+            <div class="col-lg-12 mx-auto">
+              <h2 class="display-6 fw-bold text-capitalize">join the waitlist.</h2>
+              <p class="text-muted">
+                Tell us a little bit about you. If it's a match, we'll be in
+                touch.
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <form
+                action="forms/waitlist.php"
+                method="post"
+                class="php-email-form"
               >
-                <h3 class="text-center">
-                  <span>Frequently Asked </span><strong>Questions</strong>
-                </h3>
-                <p>
-                  Here you’ll find answers to the questions we get asked most
-                  often. We’ve kept things simple and transparent so you can
-                  feel confident, and excited before you join us.
-                </p>
-              </div>
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="first-name"
+                      class="form-control"
+                      placeholder="First Name *"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="last-name"
+                      class="form-control"
+                      placeholder="Last Name *"
+                      required=""
+                    />
+                  </div>
 
-              <div
-                class="faq-container px-xl-5"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div class="faq-item">
-                  <h3 class="faq-question">Is vana a dating trip?</h3>
-                  <div class="faq-content">
-                    <p>
-                      No. It’s about great weekends with great people. Chemistry
-                      happens naturally, but the design is in the taste,
-                      conversation, food and place.
+                  <div class="col-md-6">
+                    <input
+                      type="tel"
+                      name="phone"
+                      class="form-control"
+                      placeholder="Phone *"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Email *"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="number"
+                      name="age"
+                      class="form-control"
+                      placeholder="Age *"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="job-title"
+                      class="form-control"
+                      placeholder="Job Title *"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <select
+                      name="london-borough"
+                      class="form-select"
+                      required=""
+                    >
+                      <option value="" selected disabled>
+                        London Borough *
+                      </option>
+                      <option value="Select one">Select one</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="instagram"
+                      class="form-control"
+                      placeholder="Instagram (your handle or full URL)"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="url"
+                      name="linkedin"
+                      class="form-control"
+                      placeholder="LinkedIn (https://linkedin.com/in/You)"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <select
+                      name="partnership-status"
+                      class="form-select"
+                      required=""
+                    >
+                      <option value="" selected disabled>
+                        Partnership Status *
+                      </option>
+                      <option value="Select term">Select term</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-12 mt-4">
+                    <label class="form-label mb-2" style="font-weight: 500"
+                      >What is drawing you to a vana weekend?</label
+                    >
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="drawing-reason"
+                            value="The full program"
+                            id="radio-program"
+                          />
+                          <label class="form-check-label" for="radio-program"
+                            >The full program</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="drawing-reason"
+                            value="A weekend away"
+                            id="radio-away"
+                          />
+                          <label class="form-check-label" for="radio-away"
+                            >A weekend away</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="Food, wine, and big laughs"
+                            id="radio-food"
+                          />
+                          <label class="form-check-label" for="radio-food"
+                            >Food, wine, and big laughs</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="drawing-reason"
+                            value="Meeting the highly-vetted network"
+                            id="radio-network"
+                          />
+                          <label class="form-check-label" for="radio-network"
+                            >Meeting the highly-vetted network</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="The group vibe"
+                            id="radio-vibe"
+                          />
+                          <label class="form-check-label" for="radio-vibe"
+                            >The group vibe</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="drawing-reason"
+                            value="Maybe meet someone"
+                            id="radio-meet"
+                          />
+                          <label class="form-check-label" for="radio-meet"
+                            >Maybe meet someone</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 mt-4">
+                    <label class="form-label" for="input-vibe-check"
+                      >Vibe check</label
+                    >
+                    <small class="form-text text-muted d-block mb-1"
+                      >(What kind of weekend feels right to you, and
+                      why?)</small
+                    >
+                    <textarea
+                      class="form-control"
+                      name="vibe-check"
+                      id="input-vibe-check"
+                      rows="6"
+                      required=""
+                    ></textarea>
+                  </div>
+
+                  <div class="col-md-12 mt-3">
+                    <div class="form-check mb-2">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="check-subscribe"
+                      />
+                      <label
+                        class="form-check-label small"
+                        for="check-subscribe"
+                      >
+                        I'd like to receive occasional emails about vana
+                        weekends and events. (Optional)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="check-policy"
+                        required=""
+                      />
+                      <label class="form-check-label small" for="check-policy">
+                        I agree to the privacy policy.
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 mt-4">
+                    <div class="d-flex align-items-center mb-3">
+                      <div
+                        class="g-recaptcha-placeholder"
+                        style="
+                          width: 304px;
+                          height: 78px;
+                          border: 1px solid #ccc;
+                        "
+                      >
+                        <img
+                          src="assets/images/recaptcha-placeholder.png"
+                          alt="I'm not a robot checkbox"
+                          style="width: 100%; height: 100%; object-fit: cover"
+                        />
+                      </div>
+                    </div>
+
+                    <p class="small text-muted mt-3 mb-5">
+                      By submitting, you agree to our Terms and Code of Conduct.
                     </p>
+
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary">
+                        Apply Now
+                      </button>
+                    </div>
                   </div>
                 </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">How does selection work?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Short application + vibe check. We look for mix
-                      (interests, backgrounds, energy) so the table sings.
-                      You’ll hear back within a week or so.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">What’s included in the price?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Two nights in a design-led venue, hosted long-table meals,
-                      light activities, and return group transport from a
-                      central pick‑up. Optional add-ons for wine pairings and
-                      single occupancy.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Do I need to know anyone?</h3>
-                  <div class="faq-content">
-                    <p>
-                      No. Most guests come solo. Your host removes awkwardness
-                      from pick-up to drop-off so you can relax fast.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Can I come if I don’t drink?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Absolutely. We always offer thoughtful no- and low-alcohol
-                      options.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Rooming — will I share?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Standard is shared occupancy in beautiful rooms.
-                      Single-occupancy is limited and can be booked as an
-                      add-on.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">What should I pack?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Weekend bag, layers, walkable shoes, a book for quiet
-                      pockets. We email a simple packing list the week before.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Refunds & transfers</h3>
-                  <div class="faq-content">
-                    <p>
-                      Deposits are non-refundable but transferable. If you can’t
-                      make it, you can transfer to a friend who fits our
-                      criteria (we’ll re-screen) or move to another date if
-                      available. Full T&Cs on checkout.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Accessibility & dietary needs</h3>
-                  <div class="faq-content">
-                    <p>
-                      Tell us on the form — venues are chosen for good access
-                      where possible, and chefs can accommodate most dietary
-                      needs.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">Is there an app to download?</h3>
-                  <div class="faq-content">
-                    <p>
-                      We think you spend enough time on your phone already. Vana
-                      is designed to pull you back into the real world, not
-                      another app. If you’re accepted onto a weekend, we’ll
-                      invite you into a curated WhatsApp group with the other
-                      guests and share all the details there.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">2. Why is it called Vana?</h3>
-                  <div class="faq-content">
-                    <p>
-                      In Sanskrit, vana means “forest”. A place to wander,
-                      breathe and feel a little removed from everyday life. For
-                      us, Vana is about that feeling: stepping out of the city
-                      and into somewhere softer, slower and more cinematic, even
-                      if it’s just for a weekend.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="faq-item">
-                  <h3 class="faq-question">
-                    3. Is there a way to stay connected after the weekend?
-                  </h3>
-                  <div class="faq-content">
-                    <p>
-                      We’re building The Grove, a private circle for Vana alumni
-                      – the people who’ve shared a table, a bottle and a weekend
-                      with us. More on that soon.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Faq Section -->
     </main>
 
     <footer id="footer" class="footer dark-background">
